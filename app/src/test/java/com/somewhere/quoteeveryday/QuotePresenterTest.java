@@ -1,5 +1,9 @@
 package com.somewhere.quoteeveryday;
 
+import com.somewhere.quoteeveryday.models.QuoteModel;
+import com.somewhere.quoteeveryday.presenters.QuotePresenter;
+import com.somewhere.quoteeveryday.views.QuoteView;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -9,9 +13,8 @@ import org.mockito.Mockito;
 import org.mockito.MockitoSession;
 import org.mockito.junit.MockitoJUnitRunner;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNotNull;
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
 
 @RunWith(MockitoJUnitRunner.class)
 public class QuotePresenterTest {
