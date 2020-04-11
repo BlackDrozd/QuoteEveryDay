@@ -30,7 +30,8 @@ public class QuotePresenter extends BasePresenter<QuoteView> {
         mQuoteModel.getQuote()
                 .subscribeOn(mSchedulersHolder.getIOScheduler())
                 .observeOn(mSchedulersHolder.getMainScheduler())
-                .subscribe((Quote quote) -> mQuoteView.showQuote(quote));
+                .subscribe((Quote quote) -> mQuoteView.showQuote(quote),
+                        (Throwable e) -> mQuoteView.showError(e));
 
     }
 
